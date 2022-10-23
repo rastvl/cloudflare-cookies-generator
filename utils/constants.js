@@ -26,7 +26,6 @@ const capmonser_apikey = '';
 const hcaptcha_sitekey = '';
 
 const browserOptions = {
-  headless: false,
   ignoreHTTPSErrors: true,
   args: [
     '--lang=en-US,en;q=0.9',
