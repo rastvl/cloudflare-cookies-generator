@@ -315,19 +315,14 @@ Object.defineProperty(Navigator.prototype, 'webdriver', {
         switch (index) {
           case 0:
             return plugin3;
-            break;
           case 1:
             return plugin0;
-            break;
           case 2:
             return plugin1;
-            break;
           case 3:
             return plugin2;
-            break;
           case 4:
             return plugin4;
-            break;
           default:
             break;
         }
@@ -352,10 +347,10 @@ Object.defineProperty(Navigator.prototype, 'webdriver', {
 
 // Bypass OOPIF test
 (function performance_memory() {
-  let jsHeapSizeLimitInt = 4294705152;
+  const jsHeapSizeLimitInt = 4294705152;
 
-  let total_js_heap_size = [35244183, 35244183];
-  let used_js_heap_size = [
+  const total_js_heap_size = 35244183;
+  const used_js_heap_size = [
     17632315, 17632315, 17632315, 17634847, 17636091, 17636751,
   ];
 
@@ -367,18 +362,18 @@ Object.defineProperty(Navigator.prototype, 'webdriver', {
       get: () => {
         return jsHeapSizeLimitInt;
       },
-      totalJSHeapSize: {
-        get: () => {
-          return total_js_heap_size[1];
-        },
+    },
+    totalJSHeapSize: {
+      get: () => {
+        return total_js_heap_size;
       },
-      usedJSHeapSize: {
-        get: () => {
-          if (counter > 5) {
-            counter = 0;
-          }
-          return used_js_heap_size[counter++];
-        },
+    },
+    usedJSHeapSize: {
+      get: () => {
+        if (counter > 5) {
+          counter = 0;
+        }
+        return used_js_heap_size[counter++];
       },
     },
   });
