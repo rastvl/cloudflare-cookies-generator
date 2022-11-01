@@ -1,5 +1,5 @@
-// 2captchaSolver extension code - https://github.com/2captcha/2captcha-solver
-(() => {
+// // 2captchaSolver extension code - https://github.com/2captcha/2captcha-solver
+if (window.self == window.top) (() => {
 
   let hCaptchaInstance;
 
