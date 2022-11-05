@@ -58,12 +58,30 @@ While waiting, it returns:
 If it succeeds in getting cookies, it returns them:
 ```JSON
 {
-    "cookies": [
-        "cf_clearance=uA...50; path=/; expires=Sun, 01-Oct-23 00:00:00 GMT; domain=.domain.com; HttpOnly; Secure; SameSite=None",
-        "rack.session=BAh...1d; path=/; expires=Sun, 01 Oct 2023 00:00:00 GMT; HttpOnly; SameSite=Lax; secure"
-    ],
-    "status": "done",
-    "time": "11.40"
+  "cookies": [
+    {
+      "name": "cf_clearance",
+      "value": "902d...50",
+      "domain": ".dekudeals.com",
+      "path": "/",
+      "expires": 169....957,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "rack.session",
+      "value": "BAh7C0kiD...a52f",
+      "domain": "www.dekudeals.com",
+      "path": "/",
+      "expires": 1699146346.965002,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    }
+  ],
+  "status": "done",
+  "time": "8.44"
 }
 ```
 If the timeout has expired, it returns:
