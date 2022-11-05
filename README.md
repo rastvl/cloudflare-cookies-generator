@@ -62,9 +62,9 @@ If it succeeds in getting cookies, it returns them:
     {
       "name": "cf_clearance",
       "value": "902d...50",
-      "domain": ".dekudeals.com",
+      "domain": ".domain.com",
       "path": "/",
-      "expires": 169....957,
+      "expires": 1699146346.925342,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None"
@@ -72,9 +72,9 @@ If it succeeds in getting cookies, it returns them:
     {
       "name": "rack.session",
       "value": "BAh7C0kiD...a52f",
-      "domain": "www.dekudeals.com",
+      "domain": "www.domain.com",
       "path": "/",
-      "expires": 1699146346.965002,
+      "expires": 1699146346.925342,
       "httpOnly": true,
       "secure": true,
       "sameSite": "Lax"
