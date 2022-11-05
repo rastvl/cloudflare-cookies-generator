@@ -17,24 +17,26 @@ class TaskManager {
     const tasks = this._tasks;
     tasks.set(id.toString(), {});
 
+    const ua =
+      !opts.userAgent || opts.userAgent === ''
+        ? defaultUserAgent
+        : opts.userAgent;
+
     let context;
     if (opts.proxy) {
       context = await this._browser.newContext({
-        userAgent: defaultUserAgent,
+        userAgent: ua,
         proxy: opts.proxy,
       });
     } else {
       context = await this._browser.newContext({
-        userAgent: defaultUserAgent,
+        userAgent: ua,
       });
     }
 
     const page = await context.newPage();
 
-    const ua =
-      !opts.userAgent || opts.userAgent === ''
-        ? defaultUserAgent
-        : opts.userAgent;
+
     const hcaptcha = opts.hcaptcha || '';
     const pageHandler = new PageHandler(page, opts.url, ua, hcaptcha);
 
