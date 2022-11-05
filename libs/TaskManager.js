@@ -46,7 +46,7 @@ class TaskManager {
         context.cookies().then((cookies) => {
           tasks.set(id.toString(), {
             cookies: cookies,
-            status: pageHandler._status,
+            status: pageHandler.getStatus(),
           });
           context.close();
         });

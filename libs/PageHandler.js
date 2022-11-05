@@ -101,6 +101,10 @@ class PageHandler {
     };
   }
 
+  getStatus() {
+    return this._status;
+  }
+
   _submitHcaptcha(token) {
     this._page.evaluate(`
       const callBackName = [];
