@@ -28,7 +28,7 @@ const sendCookies = (req, res) => {
       taskManager.deleteTask(id);
 
       return res.send({
-        cookies: answer.cookies.split('\n'),
+        cookies: answer.cookies,
         status: 'done',
         time: answer.time,
       });

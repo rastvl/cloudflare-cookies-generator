@@ -43,8 +43,13 @@ class TaskManager {
     function checkCookie() {
       if (pageHandler.isReady()) {
         clearInt();
-        tasks.set(id.toString(), pageHandler.getCookies());
-        context.close();
+        context.cookies().then((cookies) => {
+          tasks.set(id.toString(), {
+            cookies: cookies,
+            status: pageHandler._status,
+          });
+          context.close();
+        });
       }
     }
 
