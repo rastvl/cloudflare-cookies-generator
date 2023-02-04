@@ -11,7 +11,7 @@ const CHECK_RESPONSE_TIMEOUT = 200;
 const CHECK_CAPCHA_TIMEOUT = 500;
 const TASK_TIMEOUT = 60000; // If it was not possible to get a cookie during this time, task terminates
 
-const defaultUserAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36';
+const defaultUserAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.5414.120 Safari/537.36';
 
 // CAPTCHA-SOLVER METHOD(rucaptcha/capmonster cloud)
 const CAPTCHA_SOLVER_RUCAPTCHA = Symbol('rucaptcha_method');
@@ -36,7 +36,7 @@ const browserOptions = {
     width: 1920,
     height: 1080,
   },
-  headless: true,
+  headless: false,
   proxy: { server: 'per-context' }
 };
 
