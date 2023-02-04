@@ -363,7 +363,7 @@ Object.defineProperty(Navigator.prototype, 'webdriver', {
       return pluginArray;
     },
   });
-  
+
   Object.getOwnPropertyDescriptor(
     Object.getPrototypeOf(navigator),
     'plugins'
